@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useTogglerContext } from "../context/toggler";
 import { navLink } from "../data/dry";
@@ -14,11 +14,26 @@ const firaCode = Fira_Code({
 
 function Header() {
   const { setMobileNavbar } = useTogglerContext();
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onPageScroll = () => {
+      headerRef.current!.style.padding =
+        window.pageYOffset > 20 ? "0.75rem 1.5rem" : "1.5rem";
+    };
+    window.addEventListener("scroll", onPageScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onPageScroll);
+    };
+  }, []);
 
   return (
     <section id="header">
       <header
-        className={`flex items-center justify-between ${firaCode.className}`}
+        className={`p-6 fixed inset-x-0 top-0 z-20 bg-[#0a192f99] shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] flex items-center justify-between duration-300 ease-linear ${firaCode.className}`}
+        style={{ backdropFilter: "blur(10px)" }}
+        ref={headerRef}
       >
         <a href="/" className="z-50">
           <img src="/assets/logo-light.svg" alt="logo" className="w-12" />

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 import MobileNavbar from "./components/MobileNavbar";
 import { useTogglerContext } from "./context/toggler";
 
@@ -14,10 +15,13 @@ export default function Home() {
   }, [mobileNavbar]);
 
   return (
-    <main className="p-8">
+    <main>
       <Header />
       <MobileNavbar />
-      <div ref={blurContentRef}></div>
+      <div ref={blurContentRef}>
+        <Hero />
+        <Hero />
+      </div>
     </main>
   );
 }

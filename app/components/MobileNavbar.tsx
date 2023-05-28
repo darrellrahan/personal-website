@@ -18,7 +18,7 @@ function MobileNavbar() {
   return (
     <section id="mobile-navbar">
       <div
-        className={`fixed z-10 bg-[#0a192f]/70 inset-y-0 right-0 duration-300 ease-linear ${
+        className={`fixed z-30 bg-[#0a192f]/70 inset-y-0 right-0 duration-300 ease-linear ${
           mobileNavbar ? "left-0" : "left-[150%]"
         } ${firaCode.className}`}
       >
@@ -26,10 +26,10 @@ function MobileNavbar() {
           onClick={() => setMobileNavbar(false)}
           className="absolute inset-y-0 left-0 right-[17.395rem] z-20"
         ></div>
-        <div className="absolute inset-y-0 right-0 left-[7.35rem] bg-[#112240] z-20 flex items-center justify-center">
+        <div className="absolute inset-y-0 right-0 left-[6.5rem] bg-[#112240] z-30 flex items-center justify-center">
           <button
             onClick={() => setMobileNavbar(false)}
-            className="absolute top-8 right-6"
+            className="absolute top-6 right-6"
           >
             <IoCloseOutline color="#64ffda" fontSize="2.75rem" />
           </button>
