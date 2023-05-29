@@ -26,7 +26,14 @@ function MobileNavbar() {
           onClick={() => setMobileNavbar(false)}
           className="absolute inset-y-0 left-0 right-[17.395rem] z-20"
         ></div>
-        <div className="absolute inset-y-0 right-0 left-[6.5rem] bg-[#112240] z-30 flex items-center justify-center">
+        <div className="absolute inset-0 bg-[#112240] z-30 flex items-center justify-center">
+          <a
+            href="/"
+            onClick={() => setMobileNavbar(false)}
+            className="absolute top-6 left-6"
+          >
+            <img src="/assets/logo-light.svg" alt="logo" className="w-12" />
+          </a>
           <button
             onClick={() => setMobileNavbar(false)}
             className="absolute top-6 right-6"

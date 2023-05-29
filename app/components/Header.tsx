@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useTogglerContext } from "../context/toggler";
 import { navLink } from "../data/dry";
@@ -14,12 +14,13 @@ const firaCode = Fira_Code({
 
 function Header() {
   const { setMobileNavbar } = useTogglerContext();
-  const headerRef = useRef<HTMLElement>(null);
+  const [padding, setPadding] = useState("p-6 lg:px-12");
 
   useEffect(() => {
     const onPageScroll = () => {
-      headerRef.current!.style.padding =
-        window.pageYOffset > 20 ? "0.75rem 1.5rem" : "1.5rem";
+      setPadding(
+        window.pageYOffset > 20 ? "py-3 px-6 lg:px-12" : "p-6 lg:px-12"
+      );
     };
     window.addEventListener("scroll", onPageScroll);
 
@@ -31,11 +32,10 @@ function Header() {
   return (
     <section id="header">
       <header
-        className={`p-6 fixed inset-x-0 top-0 z-20 bg-[#0a192f99] shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] flex items-center justify-between duration-300 ease-linear ${firaCode.className}`}
+        className={`${padding} fixed inset-x-0 top-0 z-20 bg-[#0a192f99] shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] flex items-center justify-between duration-200 ease-linear ${firaCode.className}`}
         style={{ backdropFilter: "blur(10px)" }}
-        ref={headerRef}
       >
-        <a href="/" className="z-50">
+        <a href="/">
           <img src="/assets/logo-light.svg" alt="logo" className="w-12" />
         </a>
         <div className="hidden lg:flex items-center gap-8">
