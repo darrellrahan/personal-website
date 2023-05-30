@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <TogglerProvider>
-      <html lang="en">
+      <html lang="en" className="scroll-smooth">
         <body className={`${inter.className} bg-[#0a192f]`}>{children}</body>
       </html>
     </TogglerProvider>

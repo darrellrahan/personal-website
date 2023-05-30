@@ -43,6 +43,7 @@ function MobileNavbar() {
           <div className="flex items-center flex-col gap-8">
             {navLink.map((data, index) => (
               <a
+                onClick={() => setMobileNavbar(false)}
                 href={data.url}
                 key={data.text}
                 className="flex flex-col items-center gap-1 text-lg group"

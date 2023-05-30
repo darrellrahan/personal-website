@@ -55,7 +55,7 @@ function Hero() {
             Bandung, Indonesia.
           </p>
           <a
-            href="/"
+            href="#about"
             className={`${firaCode.className} border border-[#64ffda] text-[#64ffda] py-3.5 px-7 rounded hover:shadow-[4px_4px_0_0_#64ffda] hover:-translate-x-[5px] hover:-translate-y-[5px] duration-300 ease-linear mt-12`}
           >
             Learn more!
