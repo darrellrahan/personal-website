@@ -10,7 +10,7 @@ import { useTogglerContext } from "./context/toggler";
 
 export default function Home() {
   const { mobileNavbar } = useTogglerContext();
-  const blurContentRef = useRef<HTMLDivElement>(null);
+  const blurContentRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     blurContentRef.current!.style.filter = mobileNavbar ? "blur(8px)" : "";
@@ -20,11 +20,11 @@ export default function Home() {
     <main>
       <Header />
       <MobileNavbar />
-      <div ref={blurContentRef}>
+      <section id="main-content" ref={blurContentRef}>
         <Hero />
         <About />
         <Projects />
-      </div>
+      </section>
     </main>
   );
 }

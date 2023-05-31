@@ -2,6 +2,7 @@ import React from "react";
 import { Fira_Code } from "next/font/google";
 import { featuredProjects } from "../data/dry";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { SlFolder } from "react-icons/sl";
 
 const firaCode = Fira_Code({
   weight: ["300", "400", "500", "600", "700"],
@@ -12,7 +13,7 @@ const firaCode = Fira_Code({
 function Projects() {
   return (
     <section id="projects">
-      <div className="px-6 py-28 lg:px-60 space-y-10">
+      <div className="px-6 py-28 lg:px-60 flex flex-col gap-10 lg:gap-6">
         <div className="flex gap-2 items-center">
           <p className={`text-[#64ffda] ${firaCode.className} lg:text-lg`}>
             02.
@@ -73,6 +74,7 @@ function Projects() {
         </div>
 
         {/* for desktop */}
+
         <div className="hidden lg:block space-y-24">
           {featuredProjects.map((data) => (
             <div key={data.name} className="hidden lg:grid grid-cols-2">
@@ -113,7 +115,7 @@ function Projects() {
                   className={`shadow-[0_20px_30px_-15px_rgba(2,12,27,0.7)] p-6 rounded bg-[#112240] text-[#a8b2d1] my-6 w-[115%] ${
                     data.imgFirst
                       ? "-translate-x-20 text-right"
-                      : "z-20 relative text-left"
+                      : "z-10 relative text-left"
                   }`}
                 >
                   <p>{data.desc}</p>
@@ -149,9 +151,56 @@ function Projects() {
             </div>
           ))}
         </div>
+        <div className="my-16">
+          <h1 className="text-[#ccd6f6] text-center font-bold text-xl mb-8">
+            Other Noteworthy Projects
+          </h1>
+          <div className="shadow-[0_20px_30px_-15px_rgba(2,12,27,0.7)] rounded bg-[#112240] group hover:-translate-y-1 duration-200 ease-linear">
+            <a
+              href="https://darrellrahan-ecommerce.vercel.app/"
+              className="flex flex-col justify-between gap-4 p-6"
+            >
+              <div className="flex justify-between">
+                <SlFolder fontSize="2.2rem" className="text-[#64ffda]" />
+                <div className="flex gap-3 items-center">
+                  <a href="https://github.com" target="_blank">
+                    <FiGithub
+                      fontSize="1.35rem"
+                      className="text-[#a8b2d1] hover:text-[#64ffda] duration-100 ease-linear"
+                    />
+                  </a>
+                  <a href="https://github.com" target="_blank">
+                    <FiExternalLink
+                      fontSize="1.35rem"
+                      className="text-[#a8b2d1] hover:text-[#64ffda] duration-100 ease-linear"
+                    />
+                  </a>
+                </div>
+              </div>
+              <h1 className="text-[#ccd6f6] font-bold text-xl group-hover:text-[#64ffda] duration-200 ease-linear">
+                E-commerce
+              </h1>
+              <div
+                className={`${firaCode.className} flex gap-4 text-sm text-[#8892b0]`}
+              >
+                <p>Next.js</p>
+                <p>TypeScript</p>
+                <p>Tailwind</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
 export default Projects;
+
+// name: "E-commerce",
+//     desc: "Minimalist E-commerce Store. This website features a modern and intuitive design, with easy-to-use navigation and a simple shopping experience that puts the focus on the products.",
+//     tech: ["Next.js", "TypeScript", "Tailwind"],
+//     github: "https://github.com/darrellrahan/ecommerce/",
+//     demo: "https://darrellrahan-ecommerce.vercel.app/",
+//     img: "/assets/ecommerce.jpeg",
+//     imgFirst: false,
