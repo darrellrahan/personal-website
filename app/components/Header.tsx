@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useTogglerContext } from "../context/toggler";
 import { navLink } from "../data/dry";

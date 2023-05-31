@@ -5,6 +5,7 @@ import About from "./components/About";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import MobileNavbar from "./components/MobileNavbar";
+import Projects from "./components/Projects";
 import { useTogglerContext } from "./context/toggler";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <div ref={blurContentRef}>
         <Hero />
         <About />
+        <Projects />
       </div>
     </main>
   );
