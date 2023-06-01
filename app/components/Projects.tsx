@@ -1,8 +1,8 @@
 import React from "react";
-import { Fira_Code } from "next/font/google";
-import { featuredProjects } from "../data/dry";
+import { featuredProjects, networthyProjects } from "../data/dry";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { SlFolder } from "react-icons/sl";
+import { Fira_Code } from "next/font/google";
 
 const firaCode = Fira_Code({
   weight: ["300", "400", "500", "600", "700"],
@@ -18,11 +18,11 @@ function Projects() {
           <p className={`text-[#64ffda] ${firaCode.className} lg:text-lg`}>
             02.
           </p>
-          <h1 className="text-[#ccd6f6] text-xl font-semibold lg:font-bold lg:text-2xl">
-            {"<Projects"}
-          </h1>
-          <h1 className="text-[#ccd6f6] text-xl font-semibold lg:font-bold lg:text-2xl">
-            {"/>"}
+          <h1 className="text-[#ccd6f6] text-xl font-semibold lg:font-bold lg:text-[1.7rem] flex gap-1.5">
+            <span>Some</span>
+            <span>Things</span>
+            <span>I've</span>
+            <span>Built</span>
           </h1>
           <div className="w-full h-[1.5px] bg-[#233554]"></div>
         </div>
@@ -151,42 +151,62 @@ function Projects() {
             </div>
           ))}
         </div>
-        <div className="my-16">
-          <h1 className="text-[#ccd6f6] text-center font-bold text-xl mb-8">
-            Other Noteworthy Projects
-          </h1>
-          <div className="shadow-[0_20px_30px_-15px_rgba(2,12,27,0.7)] rounded bg-[#112240] group hover:-translate-y-1 duration-200 ease-linear">
+        <div className="my-16 lg:my-32">
+          <div className="mb-10 flex flex-col items-center gap-2">
+            <h1 className="text-[#ccd6f6] text-center font-bold text-xl lg:text-2xl">
+              Other Noteworthy Projects
+            </h1>
             <a
-              href="https://darrellrahan-ecommerce.vercel.app/"
-              className="flex flex-col justify-between gap-4 p-6"
+              href="/archive"
+              className={`${firaCode.className} text-[#64ffda] text-sm relative after:absolute after:bottom-0 after:w-0 hover:after:w-full after:inset-x-0 after:h-[1px] after:bg-[#64ffda] after:duration-300 after:ease-linear`}
             >
-              <div className="flex justify-between">
-                <SlFolder fontSize="2.2rem" className="text-[#64ffda]" />
-                <div className="flex gap-3 items-center">
-                  <a href="https://github.com" target="_blank">
-                    <FiGithub
-                      fontSize="1.35rem"
-                      className="text-[#a8b2d1] hover:text-[#64ffda] duration-100 ease-linear"
-                    />
-                  </a>
-                  <a href="https://github.com" target="_blank">
-                    <FiExternalLink
-                      fontSize="1.35rem"
-                      className="text-[#a8b2d1] hover:text-[#64ffda] duration-100 ease-linear"
-                    />
-                  </a>
-                </div>
-              </div>
-              <h1 className="text-[#ccd6f6] font-bold text-xl group-hover:text-[#64ffda] duration-200 ease-linear">
-                E-commerce
-              </h1>
+              View The Archive
+            </a>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {networthyProjects.map((data) => (
               <div
-                className={`${firaCode.className} flex gap-4 text-sm text-[#8892b0]`}
+                key={data.name}
+                className="shadow-[0_20px_30px_-15px_rgba(2,12,27,0.7)] rounded bg-[#112240] group hover:-translate-y-2 duration-200 ease-linear"
               >
-                <p>Next.js</p>
-                <p>TypeScript</p>
-                <p>Tailwind</p>
+                <a
+                  href={data.demo}
+                  target="_blank"
+                  className="flex flex-col justify-between gap-4 p-6"
+                >
+                  <div className="flex justify-between">
+                    <SlFolder fontSize="2.2rem" className="text-[#64ffda]" />
+                    <div className="flex gap-3 items-center">
+                      <a href={data.github} target="_blank">
+                        <FiGithub
+                          fontSize="1.35rem"
+                          className="text-[#a8b2d1] hover:text-[#64ffda] duration-100 ease-linear"
+                        />
+                      </a>
+                      <a href={data.demo} target="_blank">
+                        <FiExternalLink
+                          fontSize="1.35rem"
+                          className="text-[#a8b2d1] hover:text-[#64ffda] duration-100 ease-linear"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <h1 className="text-[#ccd6f6] font-bold text-xl group-hover:text-[#64ffda] duration-200 ease-linear">
+                    {data.name}
+                  </h1>
+                  <p className={`${firaCode.className} text-sm text-[#8892b0]`}>
+                    React
+                  </p>
+                </a>
               </div>
+            ))}
+          </div>
+          <div className="mt-16 flex justify-center">
+            <a
+              href="/archive"
+              className={`${firaCode.className} border border-[#64ffda] text-[#64ffda] py-4 px-8 text-sm rounded hover:shadow-[4px_4px_0_0_#64ffda] hover:-translate-x-[5px] hover:-translate-y-[5px] duration-300 ease-linear`}
+            >
+              View More
             </a>
           </div>
         </div>
@@ -196,11 +216,3 @@ function Projects() {
 }
 
 export default Projects;
-
-// name: "E-commerce",
-//     desc: "Minimalist E-commerce Store. This website features a modern and intuitive design, with easy-to-use navigation and a simple shopping experience that puts the focus on the products.",
-//     tech: ["Next.js", "TypeScript", "Tailwind"],
-//     github: "https://github.com/darrellrahan/ecommerce/",
-//     demo: "https://darrellrahan-ecommerce.vercel.app/",
-//     img: "/assets/ecommerce.jpeg",
-//     imgFirst: false,

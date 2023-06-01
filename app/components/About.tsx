@@ -16,11 +16,9 @@ function About() {
             <p className={`text-[#64ffda] ${firaCode.className} lg:text-lg`}>
               01.
             </p>
-            <h1 className="text-[#ccd6f6] text-xl font-semibold lg:font-bold lg:text-2xl">
-              {"<About"}
-            </h1>
-            <h1 className="text-[#ccd6f6] text-xl font-semibold lg:font-bold lg:text-2xl">
-              {"/>"}
+            <h1 className="text-[#ccd6f6] text-xl font-semibold lg:font-bold lg:text-[1.7rem] flex gap-1.5">
+              <span>About</span>
+              <span>Me</span>
             </h1>
             <div className="w-full h-[1.5px] bg-[#233554]"></div>
           </div>

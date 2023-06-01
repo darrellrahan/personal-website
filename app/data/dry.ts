@@ -33,3 +33,62 @@ export const featuredProjects = [
     imgFirst: true,
   },
 ];
+
+export const networthyProjects = [
+  {
+    name: "Sneakers E-commerce",
+    github: "https://github.com/darrellrahan/sneakers-ecommerce/",
+    demo: "https://darrellrahan-ecommerce.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "The Cocktail DB",
+    github: "https://github.com/darrellrahan/thecocktaildb/",
+    demo: "https://darrellrahan-thecocktaildb.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "TMDB",
+    github: "https://github.com/darrellrahan/tmdb/",
+    demo: "https://darrellrahan-tmdb.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Cost Of Living",
+    github: "https://github.com/darrellrahan/cost-of-living/",
+    demo: "https://darrellrahan-costofliving.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "ToDo",
+    github: "https://github.com/darrellrahan/todo-react/",
+    demo: "https://darrellrahan-todo.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Sudoku Puzzle",
+    github: "https://github.com/darrellrahan/sudoku-puzzle/",
+    demo: "https://darrellrahan-sudoku.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Dot Onclick",
+    github: "https://github.com/darrellrahan/dot-onclick/",
+    demo: "https://darrellrahan-dotonclick.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Datamuse Synonym",
+    github: "https://github.com/darrellrahan/datamuse-synonym-app/",
+    demo: "https://darrellrahan-synonym.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Colour Generator",
+    github: "https://github.com/darrellrahan/colour-generator/",
+    demo: "https://darrellrahan-synonym.netlify.app/",
+    tech: ["React"],
+  },
+];
+
+export const archiveProjects = [...featuredProjects, ...networthyProjects];

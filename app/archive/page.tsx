@@ -1,15 +1,13 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import About from "./components/About";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MobileNavbar from "./components/MobileNavbar";
-import Projects from "./components/Projects";
-import SocialsFixed from "./components/SocialsFixed";
-import { useTogglerContext } from "./context/toggler";
+import Archive from "../components/Archive";
+import Header from "../components/Header";
+import MobileNavbar from "../components/MobileNavbar";
+import SocialsFixed from "../components/SocialsFixed";
+import { useTogglerContext } from "../context/toggler";
 
-export default function Home() {
+function Home() {
   const { mobileNavbar } = useTogglerContext();
   const blurContentRef = useRef<HTMLElement>(null);
 
@@ -23,10 +21,10 @@ export default function Home() {
       <MobileNavbar />
       <section id="main-content" ref={blurContentRef}>
         <SocialsFixed />
-        <Hero />
-        <About />
-        <Projects />
+        <Archive />
       </section>
     </main>
   );
 }
+
+export default Home;
