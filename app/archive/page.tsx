@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Archive from "../components/Archive";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MobileNavbar from "../components/MobileNavbar";
 import SocialsFixed from "../components/SocialsFixed";
@@ -22,6 +23,7 @@ function Home() {
       <section id="main-content" ref={blurContentRef}>
         <SocialsFixed />
         <Archive />
+        <Footer />
       </section>
     </main>
   );

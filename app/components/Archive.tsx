@@ -1,7 +1,7 @@
 import React from "react";
-import { Fira_Code } from "next/font/google";
 import { archiveProjects } from "../data/dry";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { Fira_Code } from "next/font/google";
 
 const firaCode = Fira_Code({
   weight: ["300", "400", "500", "600", "700"],

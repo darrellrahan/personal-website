@@ -91,4 +91,127 @@ export const networthyProjects = [
   },
 ];
 
-export const archiveProjects = [...featuredProjects, ...networthyProjects];
+export const archiveProjects = [
+  ...featuredProjects,
+  ...networthyProjects,
+  {
+    name: "Checkbox Permission",
+    github: "https://github.com/darrellrahan/checkbox-permission/",
+    demo: "https://darrellrahan-cbpermissons.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Cart",
+    github: "https://github.com/darrellrahan/cart/",
+    demo: "https://darrellrahan-cart.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Stripe Landing Page",
+    github: "https://github.com/darrellrahan/stripe-submenu/",
+    demo: "https://darrellrahan-stripe.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Lorem Ipsum",
+    github: "https://github.com/darrellrahan/lorem-ipsum/",
+    demo: "https://darrellrahan-loremipsum.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Carousel",
+    github: "https://github.com/darrellrahan/react-carousel/",
+    demo: "https://darrellrahan-carousel.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Tabs",
+    github: "https://github.com/darrellrahan/tabs/",
+    demo: "https://darrellrahan-tabs.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Menu",
+    github: "https://github.com/darrellrahan/menu/",
+    demo: "https://darrellrahan-menu.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Accordion",
+    github: "https://github.com/darrellrahan/accordion/",
+    demo: "https://darrellrahan-accordion.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Employees",
+    github: "https://github.com/darrellrahan/employees/",
+    demo: "https://darrellrahan-employees.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Tours",
+    github: "https://github.com/darrellrahan/tours/",
+    demo: "https://darrellrahan-tours.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "GitHub Users API",
+    github: "https://github.com/darrellrahan/github-users-api/",
+    demo: "https://darrellrahan-githubusers.netlify.app/",
+    tech: ["React"],
+  },
+  {
+    name: "Calculator",
+    github: "https://github.com/darrellrahan/calculator/",
+    demo: "https://darrellrahan.github.io/calculator/",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Expense Tracker",
+    github: "https://github.com/darrellrahan/expense-tracker/",
+    demo: "https://darrellrahan.github.io/expense-tracker/",
+    tech: ["HTML", "Bootstrap", "JavaScript"],
+  },
+  {
+    name: "Mystery Game",
+    github: "https://github.com/darrellrahan/mystery-game/",
+    demo: "https://darrellrahan.github.io/mystery-game/",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Note Taker",
+    github: "https://github.com/darrellrahan/note-taker/",
+    demo: "https://darrellrahan.github.io/note-taker/",
+    tech: ["HTML", "Bootstrap", "JavaScript"],
+  },
+  {
+    name: "Rock Paper Scissor",
+    github: "https://github.com/darrellrahan/rock-paper-scissor/",
+    demo: "https://darrellrahan.github.io/rock-paper-scissor/",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Tic Tac Toe",
+    github: "https://github.com/darrellrahan/tic-tac-toe/",
+    demo: "https://darrellrahan.github.io/tic-tac-toe/",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Timer",
+    github: "https://github.com/darrellrahan/timer/",
+    demo: "https://darrellrahan.github.io/timer/",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "ToDo Vanilla JS",
+    github: "https://github.com/darrellrahan/todo-vanillajs/",
+    demo: "https://darrellrahan.github.io/todo-vanillajs/",
+    tech: ["HTML", "Bootstrap", "JavaScript"],
+  },
+  {
+    name: "Vowel Counter",
+    github: "https://github.com/darrellrahan/vowel-counter/",
+    demo: "https://darrellrahan.github.io/vowel-counter/",
+    tech: ["HTML", "Bootstrap", "JavaScript"],
+  },
+];
