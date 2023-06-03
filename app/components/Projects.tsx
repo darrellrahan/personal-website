@@ -211,7 +211,7 @@ function Projects() {
                     <p
                       className={`${firaCode.className} text-sm text-[#8892b0]`}
                     >
-                      React
+                      {data.tech.join(" · ")}
                     </p>
                   </a>
                 </div>

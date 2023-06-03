@@ -36,6 +36,18 @@ export const featuredProjects = [
 
 export const networthyProjects = [
   {
+    name: "Google Drive Clone",
+    github: "https://github.com/darrellrahan/gdrive-clone/",
+    demo: "https://darrellrahan-gdriveclone.netlify.app/",
+    tech: ["React", "Firebase"],
+  },
+  {
+    name: "Wedding",
+    github: "https://github.com/darrellrahan/wedding-public/",
+    demo: "https://darrellrahan-wedding.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+  },
+  {
     name: "Sneakers E-commerce",
     github: "https://github.com/darrellrahan/sneakers-ecommerce/",
     demo: "https://darrellrahan-ecommerce.netlify.app/",
@@ -45,19 +57,19 @@ export const networthyProjects = [
     name: "The Cocktail DB",
     github: "https://github.com/darrellrahan/thecocktaildb/",
     demo: "https://darrellrahan-thecocktaildb.netlify.app/",
-    tech: ["React"],
+    tech: ["React", "API"],
   },
   {
     name: "TMDB",
     github: "https://github.com/darrellrahan/tmdb/",
     demo: "https://darrellrahan-tmdb.netlify.app/",
-    tech: ["React"],
+    tech: ["React", "API"],
   },
   {
     name: "Cost Of Living",
     github: "https://github.com/darrellrahan/cost-of-living/",
     demo: "https://darrellrahan-costofliving.netlify.app/",
-    tech: ["React"],
+    tech: ["React", "API"],
   },
   {
     name: "ToDo",
@@ -66,21 +78,9 @@ export const networthyProjects = [
     tech: ["React"],
   },
   {
-    name: "Sudoku Puzzle",
-    github: "https://github.com/darrellrahan/sudoku-puzzle/",
-    demo: "https://darrellrahan-sudoku.netlify.app/",
-    tech: ["React"],
-  },
-  {
     name: "Dot Onclick",
     github: "https://github.com/darrellrahan/dot-onclick/",
     demo: "https://darrellrahan-dotonclick.netlify.app/",
-    tech: ["React"],
-  },
-  {
-    name: "Datamuse Synonym",
-    github: "https://github.com/darrellrahan/datamuse-synonym-app/",
-    demo: "https://darrellrahan-synonym.netlify.app/",
     tech: ["React"],
   },
   {
@@ -94,6 +94,18 @@ export const networthyProjects = [
 export const archiveProjects = [
   ...featuredProjects,
   ...networthyProjects,
+  {
+    name: "Sudoku Puzzle",
+    github: "https://github.com/darrellrahan/sudoku-puzzle/",
+    demo: "https://darrellrahan-sudoku.netlify.app/",
+    tech: ["React", "API"],
+  },
+  {
+    name: "Datamuse Synonym",
+    github: "https://github.com/darrellrahan/datamuse-synonym-app/",
+    demo: "https://darrellrahan-synonym.netlify.app/",
+    tech: ["React", "API"],
+  },
   {
     name: "Checkbox Permission",
     github: "https://github.com/darrellrahan/checkbox-permission/",
@@ -158,7 +170,7 @@ export const archiveProjects = [
     name: "GitHub Users API",
     github: "https://github.com/darrellrahan/github-users-api/",
     demo: "https://darrellrahan-githubusers.netlify.app/",
-    tech: ["React"],
+    tech: ["React", "API"],
   },
   {
     name: "Calculator",
