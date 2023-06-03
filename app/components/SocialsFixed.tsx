@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import { Fira_Code } from "next/font/google";
+import { RevealWrapper } from "next-reveal";
 
 const firaCode = Fira_Code({
   weight: ["300", "400", "500", "600", "700"],
@@ -13,19 +14,25 @@ function SocialsFixed() {
   return (
     <section id="socials-fixed">
       <div className="hidden lg:flex flex-col gap-6 fixed left-12 bottom-0">
-        <a href="https://github.com/darrellrahan">
-          <FiGithub
-            fontSize="1.5rem"
-            className="text-[#a8b2d1] hover:text-[#64ffda] hover:-translate-y-[3px] duration-100 ease-linear"
-          />
-        </a>
-        <a href="https://www.instagram.com/darrell.rr">
-          <AiOutlineInstagram
-            fontSize="1.5rem"
-            className="text-[#a8b2d1] hover:text-[#64ffda] hover:-translate-y-[3px] duration-100 ease-linear"
-          />
-        </a>
-        <div className="w-[1.5px] mx-auto h-[5.5rem] bg-[#a8b2d1]"></div>
+        <RevealWrapper origin="bottom">
+          <a href="https://github.com/darrellrahan">
+            <FiGithub
+              fontSize="1.5rem"
+              className="text-[#a8b2d1] hover:text-[#64ffda] hover:-translate-y-[3px] duration-100 ease-linear"
+            />
+          </a>
+        </RevealWrapper>
+        <RevealWrapper origin="bottom">
+          <a href="https://www.instagram.com/darrell.rr">
+            <AiOutlineInstagram
+              fontSize="1.5rem"
+              className="text-[#a8b2d1] hover:text-[#64ffda] hover:-translate-y-[3px] duration-100 ease-linear"
+            />
+          </a>
+        </RevealWrapper>
+        <RevealWrapper origin="bottom">
+          <div className="w-[1.5px] mx-auto h-[5.5rem] bg-[#a8b2d1]"></div>
+        </RevealWrapper>
       </div>
       <div className="hidden lg:flex flex-col fixed -right-8 bottom-0">
         <a
@@ -34,7 +41,9 @@ function SocialsFixed() {
         >
           drafa0609@gmail.com
         </a>
-        <div className="w-[1.5px] mx-auto h-[5.5rem] bg-[#a8b2d1]"></div>
+        <RevealWrapper origin="bottom">
+          <div className="w-[1.5px] mx-auto h-[5.5rem] bg-[#a8b2d1]"></div>
+        </RevealWrapper>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 export const navLink = [
-  { url: "#about", text: "About" },
-  { url: "#projects", text: "Projects" },
-  { url: "#contact", text: "Contact" },
+  { url: "/#about", text: "About" },
+  { url: "/#projects", text: "Projects" },
+  { url: "/#contact", text: "Contact" },
 ];
 
 export const featuredProjects = [
