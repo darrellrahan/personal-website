@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import { Fira_Code } from "next/font/google";
+import { CiLinkedin } from "react-icons/ci";
 import { RevealWrapper } from "next-reveal";
 
 const firaCode = Fira_Code({
@@ -14,6 +15,14 @@ function SocialsFixed() {
   return (
     <section id="socials-fixed">
       <div className="hidden lg:flex flex-col gap-6 fixed left-12 bottom-0 z-10">
+        <RevealWrapper origin="bottom">
+          <a href="https://www.linkedin.com/in/darrellrahan">
+            <CiLinkedin
+              fontSize="1.75rem"
+              className="text-[#a8b2d1] hover:text-[#64ffda] hover:-translate-y-[3px] duration-100 ease-linear"
+            />
+          </a>
+        </RevealWrapper>
         <RevealWrapper origin="bottom">
           <a href="https://github.com/darrellrahan">
             <FiGithub
